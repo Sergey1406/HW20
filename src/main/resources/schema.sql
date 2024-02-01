@@ -1,0 +1,13 @@
+
+CREATE TABLE IF NOT EXISTS Orders(
+    id SERIAL PRIMARY KEY,
+    cost INT,
+    name VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS Product(
+id SERIAL PRIMARY KEY,
+orders_id INT REFERENCES Orders(id),
+cost INT,
+name VARCHAR
+);
